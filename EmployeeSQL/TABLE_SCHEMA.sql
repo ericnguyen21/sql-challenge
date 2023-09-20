@@ -41,12 +41,3 @@ CREATE TABLE salaries (
 	salary int NOT NULL,
     FOREIGN KEY(emp_no) REFERENCES employees (emp_no)
 );
-
----1.List the employee number, last name, first name, sex, and salary of each employee.
-Select e.emp_no, e.last_name, e.first_name, e.sex, s.salary
-From employees e
-Join salaries s
-On (e.emp_no = s.emp_no)
-order by e.emp_no
-
----2. List first name, last name, and hire date for employees who were hired in 1986.
